@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+@section featured {
+
+    @if (TempData["Message"] != null)
+    {
+        <section class="featured">
+            <div class="content-wrapper">
+                 <hgroup class="title">
+                    <h2>@TempData["Message"]</h2>
+                </hgroup>
+            </div>
+        </section>
+    }
+}
+
+<h2>Index</h2>
+
+<h3>@Html.ActionLink("New Account", "Create")</h3>
+
+<table>
+    <tr>
+        <th>Account No.</th>
+        <th>Balance (RM)</th>
+        <th>Action</th>
+    </tr>
+@foreach (var account in ViewBag.Accounts)
+{
+    <tr>
+        <td>@account.AccountNo</td>
+        <td>@account.Balance</td>
+        <td>@Html.ActionLink("Transfer", "Transfer", new { id = account.Id })</td>
+    </tr>
+}
+</table>
+
+<style>
+    /*.message-info {
+        background: lemonchiffon;
+        margin: 20px 0;
+    }*/
+
+    table {
+        width: 60%;
+    }
+
+    td, th {
+        border: 1px solid dimgray;
+        padding: 5px;
+    }
+
+</style>

@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Account</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Account No</label><input type="text" name="AccountNo" />
+    <label>Initial Balance (RM)</label><input type="text" name="Balance" />
+    
+    <div>
+        <input type="submit" value="Save" />    
+    </div>
+}

@@ -1,4 +1,13 @@
-jomweb_unittest
-===============
+Unit Testing Demo for JOMWEB 22 June 2013
+=========================================
 
-Source code and slides for JOMWEB Unit Testing demo.
+This is the repo for source codes and slide deck for JOMWEB Unit Testing demo.
+
+To build and run the src, use Visual Studio.
+To run the tests, use NUnit (http://nunit.org)
+
+Change VS settings to that it downloads NuGet packages upon build.
+http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages
+
+
+

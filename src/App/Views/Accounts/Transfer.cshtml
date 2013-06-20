@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Transfer";
+}
+
+<h2>Transfer Funds</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Hidden("sourceId", ((App.Models.Account)ViewBag.SourceAccount).Id)
+
+    <label>From Account</label><span>@ViewBag.SourceAccount.DisplayName</span>
+    <label>To Account</label>@Html.DropDownList("sinkId", new SelectList(ViewBag.SinkAccounts, "Id", "DisplayName"))
+    <label>Amount (RM)</label><input type="text" name="amount" />
+    
+    <div>
+        <input type="submit" value="Transfer" />    
+    </div>
+}
