@@ -27,9 +27,11 @@ namespace App
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+
             //
             // IoC setup
             //
+
             var builder = new ContainerBuilder();
 
             var connStr = ConfigurationManager.ConnectionStrings["conn1"].ConnectionString;
